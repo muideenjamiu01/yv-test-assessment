@@ -7,13 +7,12 @@ import { toast } from "react-toastify";
 import CryptoJS from "crypto-js";
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
+import { api } from "@/api/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase";
+import Link from "next/link";
 
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../../firebase';
-
-import Link from 'next/link'
-
-const LoginForm = () => {
+const SignUpForm = () => {
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -33,29 +32,28 @@ const LoginForm = () => {
     password: Yup.string().required("Password is Required"),
   });
 
-  const handleLogin = async (values, { setSubmitting }) => {
+  const handleSignUp = async (values, { setSubmitting }) => {
     setSubmitting(true);
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password);
+      const userCredential = await createUserWithEmailAndPassword(auth, values.email, values.password);
       const user = userCredential.user;
       console.log(user, "user");
-      router.push("/invoice");
-      toast.success("Login successful!");
+      router.push("/");
+      toast.success("Registration successful!");
       setIsLoggedIn(true);
-    } catch (error) {      
-      const errorMessage = error.message || "Login failed. Please try again.";
+    } catch (error) {
+      const errorMessage = error.message || "Registration failed. Please try again.";
       toast.error(errorMessage);
     } finally {
       setSubmitting(false);
     }
   };
-  
 
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={handleLogin}
+      onSubmit={handleSignUp}
     >
       {({ isSubmitting }) => (
         <Form>
@@ -65,7 +63,7 @@ const LoginForm = () => {
                 SE
               </h1>
               <p className="text-lightPrimary text-base font-medium mb-10">
-                Login to Your Dashboard
+                Create Account Here....
               </p>
             </div>
 
@@ -157,35 +155,30 @@ const LoginForm = () => {
               </div>
               <div className="text-sm">
                 <Link
-                  href="/signup"
+                  href="/"
                   className="font-bold text-sm  text-darkGreen hover:text-darkGreen/90"
                 >
-                  Dont have an account?
+                  Already have an account?
                 </Link>
               </div>
-             
-
-             
             </div>
             <div className="flex">
-                <button
-                  type="submit"
-                  disabled={isSubmitting || isLoggedIn}
-                  className="bg-primary hover:bg-primary/70 text-white w-full mt-2  rounded-md cursor-pointer font-bold py-2 px-6"
-                >
-                  {isSubmitting ? (
-                    <div className="flex justify-center">
-                      <BeatLoader color="#fff" />
-                    </div>
-                  ) : isLoggedIn ? (
-                    "Logged in"
-                  ) : (
-                    "Login"
-                  )}
-                </button>
-              </div>
-            <br />
-            {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting || isLoggedIn}
+                className="bg-primary hover:bg-primary/70 text-white w-full mt-2  rounded-md cursor-pointer font-bold py-2 px-6"
+              >
+                {isSubmitting ? (
+                  <div className="flex justify-center">
+                    <BeatLoader color="#fff" />
+                  </div>
+                ) : isLoggedIn ? (
+                  "Already singed Up"
+                ) : (
+                  "Sign Up"
+                )}
+              </button>
+            </div>
           </div>
         </Form>
       )}
@@ -193,4 +186,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignUpForm;
