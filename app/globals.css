@@ -2,22 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .h-container {
+    @apply bg-white rounded-lg px-6 py-2;
   }
-}
+  .h-heading-con {
+    @apply flex justify-between items-center;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .h-heading {
+    @apply font-bold text-[20px] text-[#333333];
+  }
+  .chart-heading {
+    @apply font-bold text-base text-[#333333] mb-3;
+  }
+  .chart-para {
+    @apply font-bold text-sm text-lightPrimary;
+  }
+
+  .card-container {
+    @apply flex flex-wrap xl:flex-nowrap justify-center gap-4 mt-6;
+  }
+  .chart-container {
+    @apply bg-white rounded-lg px-6 py-2;
+  }
+  .grid-c2 {
+    @apply grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6;
+  }
+  .grid-c3 {
+    @apply grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-4;
+  }
+  .grid-c4 {
+    @apply grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-4;
+  }
+
+  .table-container {
+    @apply min-w-full divide-y-2 divide-gray-200 bg-white text-sm;
+  }
+  .table-header {
+    @apply text-lightPrimary;
+  }
+  .table-head {
+    @apply whitespace-nowrap px-4 py-2 font-medium cursor-pointer;
+  }
+  .table-body {
+    @apply divide-y divide-gray-200 text-sm font-normal;
+  }
+  .table-data {
+    @apply whitespace-nowrap px-4 py-2 text-gray-700;
+  }
+  .menuBtn {
+    /* @apply flex items-center gap-4 w-full border border-slate-100 px-4 py-2 text-left bg-white duration-200 hover:text-gray-900 text-gray-700 hover:bg-gray-100  cursor-pointer ; */
+    @apply flex items-center gap-2 w-full border border-slate-100 p-2   bg-white duration-200 hover:text-gray-900 text-gray-700 hover:bg-gray-100  cursor-pointer ;
+  }
+  .pHead {
+    @apply text-lightPrimary font-bold text-sm;
+  }
+  .pSub {
+    @apply font-normal text-sm text-black600;
+  }
+  .pFlex {
+    @apply flex flex-col mb-4;
+  }
+
 }
 
 @layer utilities {
