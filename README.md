@@ -5,6 +5,14 @@
 First, run the development server:
 
 ```bash
+Instructions:
+
+Clone the repository: git clone <repo-url>
+Install dependencies: npm install
+Run the app: npm run dev
+Backend API: Run mock server: node server.js
+Open the app at: http://localhost:3000
+
 npm run dev
 # or
 yarn dev

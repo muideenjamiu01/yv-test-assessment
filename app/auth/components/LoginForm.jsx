@@ -7,7 +7,8 @@ import { toast } from "react-toastify";
 import CryptoJS from "crypto-js";
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
-import { api } from "../../api/auth";
+import { api } from "@/api/auth";
+
 
 const LoginForm = () => {
   const router = useRouter();
