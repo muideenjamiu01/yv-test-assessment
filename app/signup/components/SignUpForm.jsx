@@ -63,7 +63,7 @@ const SignUpForm = () => {
           <div className="w-full bg-white">
             <div className="flex  flex-col items-center justify-center w-full  overflow-hidden">
               <h1 className="text-2xl font-bold text-primary text-center mb-4">
-                SE
+                IP
               </h1>
               <p className="text-lightPrimary text-base font-medium mb-10">
                 Create Account Here....

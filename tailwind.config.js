@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-satoshi)"],
+        sans: ["var(--font-neuehaas)"],
+        // sans: ['"Neue Haas Grotesk Display Pro"', 'sans-serif'],
       },
       theme: {
         backgroundColor: {

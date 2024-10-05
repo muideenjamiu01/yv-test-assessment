@@ -26,26 +26,6 @@ import messageIcon from "../../public/assets/svgs/message-question.svg"
 import settingsIcon from "../../public/assets/svgs/setting.svg"
 
 
-// const SidebarLink = ({ to, icon, label, isActive, onClick }) => (
-//   <div onClick={onClick} className="cursor-pointer mb-2 ">
-//     <Link href={to}>
-//       <div
-//         className={`px-4 py-2 text-[#697598] text-center flex items-center transition-colors duration-200 ${
-//           isActive
-//             ? "bg-primary text-primary rounded-lg text-lg font-bold mx-0"
-//             : "text-white hover:bg-white hover:text-primary rounded-md"
-//         }`}
-//       >
-//         <div className="mr-2">{icon}</div>
-//         <div>
-//           <p className="text-base font-medium">{label}</p>
-//         </div>
-//       </div>
-//     </Link>
-//   </div>
-// );
-
-
 
 const SidebarLink = ({ to, imageSrc, label, isActive, onClick }) => (
   <div onClick={onClick} className="cursor-pointer mb-2 ">
@@ -54,7 +34,7 @@ const SidebarLink = ({ to, imageSrc, label, isActive, onClick }) => (
         className={`p-4 text-[#697598] font-normal text-sm text-center flex items-center transition-colors duration-200 ${
           isActive
             ? "bg-white text-[#4F4F4F]  border-4 border-[#F8F8FB] rounded-full text-sm font-bold mx-0"
-            : " hover-text-white hover:bg-[#4F4F4F] hover:bg-border-2 hover:border-[#F8F8FB]  rounded-full"
+            : "hover:text-gray-800 hover:bg-gray-100 hover:bg-border-2 hover:border-[#F8F8FB]  rounded-full"
         }`}
       >
         <div className="mr-2">
@@ -66,6 +46,7 @@ const SidebarLink = ({ to, imageSrc, label, isActive, onClick }) => (
               height: "auto",
             }}
             quality={100}
+            
           />
         </div>
         <div>
@@ -96,18 +77,7 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
       ref={ref}
       className="bg-white shadow-2xl fixed w-56 h-screen overflow-y-auto z-50"
     >
-      <div className="flex justify-center  bg-white">
-        <Image
-          src=""
-          alt="logo"
-          style={{
-            width: "120px",
-            height: "auto",
-          }}
-          quality={100}
-        />
-      </div>
-    
+        
         <div className="pt-4 flex justify-center">
           <div className="flex flex-col">
           <SidebarLink
