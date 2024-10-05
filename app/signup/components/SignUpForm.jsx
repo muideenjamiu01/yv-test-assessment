@@ -11,9 +11,12 @@ import { api } from "@/api/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase";
 import Link from "next/link";
+import { useDispatch } from 'react-redux';
+import { setUser } from '@/redux/features/user';
 
 const SignUpForm = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const key = process.env.NEXT_PUBLIC_SECRET_KEY;
@@ -37,7 +40,7 @@ const SignUpForm = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, values.email, values.password);
       const user = userCredential.user;
-      console.log(user, "user");
+      dispatch(setUser({ id: user.uid, email: user.email }));
       router.push("/");
       toast.success("Registration successful!");
       setIsLoggedIn(true);

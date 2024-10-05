@@ -30,7 +30,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-
+## To run db
+ npx json-server --watch db.json --port 4000
 
 ## Deploy on Vercel
 

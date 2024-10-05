@@ -1,0 +1,6 @@
+{
+  "invoices": [
+    { "id": 1, "name": "John Doe", "amount": 200, "status": "Paid" },
+    { "id": 2, "name": "Jane Doe", "amount": 300, "status": "Pending" }
+  ]
+}
