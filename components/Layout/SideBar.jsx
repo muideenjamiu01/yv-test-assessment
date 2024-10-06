@@ -5,19 +5,6 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
-import {
-  MdBusiness,
-  MdDashboard,
-  MdOutlinePayments,
-  MdOutlineQrCodeScanner,
-  MdLeaderboard,
-} from "react-icons/md";
-
-import { TbUsersGroup, TbUserCheck, TbWallet } from "react-icons/tb";
-import { FaUser } from "react-icons/fa";
-import { HiOutlineTicket } from "react-icons/hi";
-import { RiHome5Line } from "react-icons/ri";
-
 import HomeIcon from "../../public/assets/svgs/home-icon.svg"
 import OverviewIcon from "../../public/assets/svgs/dashboard.svg"
 import userIcon from "../../public/assets/svgs/user-icon.svg"
@@ -50,7 +37,7 @@ const SidebarLink = ({ to, imageSrc, label, isActive, onClick }) => (
           />
         </div>
         <div>
-          <p className="text-sm font-medium">{label}</p>
+          <p className="text-sm font-normal">{label}</p>
         </div>
       </div>
     </Link>

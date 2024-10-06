@@ -47,12 +47,12 @@ function DashboardLayout({ children }) {
         <SideBar showNav={showNav} />
       </Transition>
       <main
-        className={`pt-16 transition-all duration-[400ms] ${
+        className={`pt-16 transition-all duration-[400ms] mx-auto ${
           showNav && !isMobile ? "pl-56 " : ""
         }`}
       >
         {/* pl-56 shouldhave the same value as w-56 inside sidebar first div container. if the value is 4 then the w too should be 4 */}
-        <div className="px-4 md-px-10 bg-[#F5F6FA]">{children}</div>
+        <div className="px-4 md-px-10 bg-[#F5F6FA] ">{children}</div>
       </main>
     </>
   );
