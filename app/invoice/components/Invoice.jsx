@@ -1,117 +1,247 @@
-import React from 'react';
+import Image from "next/image";
+import React from "react";
+import senderImage from "../../../public/assets/svgs/sender.svg";
 
-const Invoice = () => {
+const Invoice = ({invoiceData}) => {
+
+  const {
+    sender,
+    customer,
+    invoiceDetails,
+    items,
+    totals,
+    paymentInfo,
+    footerNote,
+  } = invoiceData;
+
   return (
-    <div className="bg-gray-100 p-10 flex justify-center">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-2xl">
-        {/* Header */}
-        <div className="flex justify-between mb-6">
-          <div>
-            <h2 className="text-xl font-bold text-gray-700">Fabulous Enterprise</h2>
-            <p className="text-sm text-gray-500">+234 808 371173 | hello@fabulousent.co</p>
-            <p className="text-sm text-gray-500">456 Hart Ridge Road 49426 Gaines, MI</p>
-          </div>
-          <div className="text-right">
-            <p className="text-sm font-medium text-gray-700">Customer:</p>
-            <p className="text-lg font-semibold text-gray-900">Olanleji Ojo Adewale</p>
-            <p className="text-sm text-gray-500">+234 805 181 2309</p>
-            <p className="text-sm text-gray-500">info@olanlejiade.com</p>
-          </div>
-        </div>
+    <div className="rounded-[40px] shadow-sm p-6 bg-white border">
+      <div className="">
+        <div className="bg-pink100 p-5 rounded-[40px] mb-6">
+          <div className="flex justify-between mb-8">
+            {/* Sender Details */}
+            <div>
+              <p className="text-sm font-medium text-primaryGrey uppercase mb-4">
+                Sender
+              </p>
+              <div className="flex items-start gap-4">
+                <div className="bg-white rounded-2xl p-2">
+                  <Image
+                    src={senderImage}
+                    alt="sender-image"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                    quality={100}
+                  />
+                </div>
+                <div>
+                  <h2 className="text-lg font-medium text-primaryBlack mb-2">
+                    {sender?.name}
+                  </h2>
+                  <p className="text-sm font-normal text-primaryGrey mb-2">
+                    {sender?.phone}
+                  </p>
+                  <p className="text-sm font-normal text-primaryGrey mb-2">
+                    {sender?.address}
+                  </p>
+                  <p className="text-sm font-normal text-primaryGrey">
+                    {sender?.email}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        {/* Invoice details */}
-        <div className="grid grid-cols-2 gap-4 mb-8">
-          <div>
-            <p className="text-sm font-medium text-gray-700">Invoice No:</p>
-            <p className="text-sm text-gray-900">#322305500</p>
+            {/* Customer Details */}
+            <div className="text-right">
+              <p className="text-sm font-medium text-primaryGrey uppercase mb-4">
+                Customer:
+              </p>
+              <p className="text-lg font-medium text-primaryBlack mb-2">
+                {customer?.name}
+              </p>
+              <p className="text-sm font-medium text-primaryGrey mb-2">
+                {customer?.phone}
+              </p>
+              <p className="text-sm font-medium text-primaryGrey">
+                {customer?.email}
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-sm font-medium text-gray-700 text-right">Billing Currency:</p>
-            <p className="text-sm text-gray-900 text-right">USD ($)</p>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-gray-700">Issue Date:</p>
-            <p className="text-sm text-gray-900">March 20th, 2023</p>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-gray-700 text-right">Due Date:</p>
-            <p className="text-sm text-gray-900 text-right">May 19th, 2023</p>
+
+          {/* Invoice Details */}
+          <div className="w-full">
+            <p className="text-sm font-medium text-primaryGrey uppercase mb-2">
+              Invoice details
+            </p>
+            <div className="grid grid-cols-4 gap-2">
+              <div className="w-fit">
+                <p className="text-xs font-normal text-grey400 mb-2">
+                  Invoice No:
+                </p>
+                <p className="text-sm font-medium text-primaryBlack">
+                  {invoiceDetails?.invoiceNo}
+                </p>
+              </div>
+              <div className="w-fit">
+                <p className="text-xs font-normal text-grey400 mb-2">
+                  Issue Date:
+                </p>
+                <p className="text-sm font-medium text-primaryBlack">
+                  {invoiceDetails?.issueDate}
+                </p>
+              </div>
+              <div className="w-fit">
+                <p className="text-xs font-normal text-grey400 mb-2">
+                  Due Date:
+                </p>
+                <p className="text-sm font-medium text-primaryBlack">
+                  {invoiceDetails?.dueDate}
+                </p>
+              </div>
+              <div className="w-fit">
+                <p className="text-xs font-normal text-grey400 mb-2">
+                  Billing Currency:
+                </p>
+                <p className="text-sm font-medium text-primaryBlack">
+                  {invoiceDetails?.billingCurrency}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Items */}
+        <div className="flex gap-10 items-center">
+          <p className="text-xl font-medium text-primaryBlack">Items</p>
+          <hr className="w-full bg-slate-400" />
+        </div>
         <table className="w-full mb-8">
           <thead>
-            <tr className="text-left bg-gray-200">
-              <th className="py-2 px-4 text-gray-600">Items</th>
-              <th className="py-2 px-4 text-gray-600">Quantity</th>
-              <th className="py-2 px-4 text-gray-600">Rate</th>
-              <th className="py-2 px-4 text-gray-600">Amount</th>
+            <tr className="text-left">
+              <th className="py-2 px-4 text-gray-600 w-60"></th>
+              <th className="py-2 px-4 text-gray-600"></th>
+              <th className="py-2 px-4 text-gray-600"></th>
+              <th className="py-2 px-4 text-gray-600"></th>
             </tr>
           </thead>
           <tbody>
+            {items?.map((item, index) => (
+              <tr key={index}>
+                <td className="py-2 w-60 mb-10 font-medium text-base text-primaryBlack">
+                  {item.description}
+                  {item.notes && (
+                    <p className="text-grey400 text-xs font-normal">
+                      {item.notes}
+                    </p>
+                  )}
+                </td>
+                <td className="py-2 font-medium text-base text-primaryBlack text-right">
+                  {item.quantity}
+                </td>
+                <td className="py-2 font-medium text-base text-primaryBlack text-right">
+                  ${item.unitPrice.toLocaleString()}
+                </td>
+                <td className="py-2 font-medium text-base text-primaryBlack text-right">
+                  ${item.total.toLocaleString()}
+                </td>
+              </tr>
+            ))}
             <tr>
-              <td className="py-2 px-4">Email Marketing</td>
-              <td className="py-2 px-4">10</td>
-              <td className="py-2 px-4">$1,500</td>
-              <td className="py-2 px-4">$15,000.00</td>
+              <td className="py-2 w-60"></td>
+              <td
+                colSpan="2"
+                className="text-sm text-grey200 font-normal mb-4 uppercase"
+              >
+                Subtotal
+              </td>
+              <td className="py-2 text-base font-normal text-primaryDarkGrey text-right">
+                ${totals.subTotal.toLocaleString()}
+              </td>
             </tr>
             <tr>
-              <td className="py-2 px-4">Video looping effect</td>
-              <td className="py-2 px-4">6</td>
-              <td className="py-2 px-4">$110,500</td>
-              <td className="py-2 px-4">$663,000.00</td>
+              <td className="py-2 w-60"></td>
+              <td
+                colSpan="2"
+                className="text-sm text-grey200 font-normal mb-4 uppercase"
+              >
+                Discount ({totals.discount})
+              </td>
+              <td className="py-2 text-base font-normal text-primaryDarkGrey text-right">
+                ${totals.totalAmountDue.toLocaleString()}
+              </td>
             </tr>
             <tr>
-              <td className="py-2 px-4">Graphic design for emails</td>
-              <td className="py-2 px-4">7</td>
-              <td className="py-2 px-4">$32,750</td>
-              <td className="py-2 px-4">$19,250.00</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4">Video looping effect</td>
-              <td className="py-2 px-4">6</td>
-              <td className="py-2 px-4">$110,500</td>
-              <td className="py-2 px-4">$663,000.00</td>
+              <td className="py-2"></td>
+              <td
+                colSpan="2"
+                className="text-lg font-bold text-primaryDarkGrey uppercase"
+              >
+                Total Amount Due
+              </td>
+              <td className="text-lg font-bold text-primaryDarkGrey text-right">
+                ${totals.totalAmountDue.toLocaleString()}
+              </td>
             </tr>
           </tbody>
         </table>
 
-        {/* Totals */}
-        <div className="flex justify-end mb-6">
-          <div className="text-right">
-            <p className="text-sm text-gray-700">Subtotal: $6,697,200.00</p>
-            <p className="text-sm text-gray-700">Discount (2.5%): $167,430.00</p>
-            <p className="text-lg font-bold text-gray-900">Total Amount Due: $6,529,770.00</p>
-          </div>
-        </div>
+        
 
         {/* Payment Information */}
-        <div className="bg-gray-100 p-4 rounded-lg">
-          <p className="text-sm font-medium text-gray-700">Payment Information</p>
-          <div className="grid grid-cols-2 gap-4 mt-2">
-            <div>
-              <p className="text-sm text-gray-600">Account Name:</p>
-              <p className="text-sm text-gray-900">Fabulous Enterprise</p>
+        <div className="bg-white p-4 rounded-3xl border border-grey200">
+          <p className="text-sm font-medium text-primaryGrey tracking-[1px] uppercase mb-2">
+            Payment Information
+          </p>
+          <div className="grid grid-cols-4 gap-4">
+            <div className="w-fit">
+              <p className="text-xs font-normal text-grey400 uppercase mb-2">
+                Account Name
+              </p>
+              <p className="text-sm font-medium text-primaryBlack">
+                {paymentInfo.accountName}
+              </p>
             </div>
-            <div>
-              <p className="text-sm text-gray-600 text-right">Due Date:</p>
-              <p className="text-sm text-gray-900 text-right">May 19th, 2023</p>
+            <div className="w-fit">
+              <p className="text-xs font-normal text-grey400 uppercase mb-2">
+                Account Number
+              </p>
+              <p className="text-sm font-medium text-primaryBlack">
+                {paymentInfo.accountNumber}
+              </p>
             </div>
-            <div>
-              <p className="text-sm text-gray-600">Account Number:</p>
-              <p className="text-sm text-gray-900">3223055000</p>
+            <div className="w-fit">
+              <p className="text-xs font-normal text-grey400 uppercase mb-2">
+                Ach Routing No
+              </p>
+              <p className="text-sm font-medium text-primaryBlack">
+                {paymentInfo.achRoutingNo}
+              </p>
             </div>
-            <div>
-              <p className="text-sm text-gray-600 text-right">Bank Name:</p>
-              <p className="text-sm text-gray-900 text-right">USD ($)</p>
+            <div className="w-fit">
+              <p className="text-xs font-normal text-grey400 uppercase mb-2">
+                Bank Name
+              </p>
+              <p className="text-sm font-medium text-primaryBlack">
+                {paymentInfo.bankName}
+              </p>
+            </div>
+            <div className="w-fit">
+              <p className="text-xs font-normal text-grey400 uppercase mb-2">
+                Bank Branch
+              </p>
+              <p className="text-sm font-medium text-primaryBlack">
+                {paymentInfo.bankBranch}
+              </p>
             </div>
           </div>
         </div>
 
         {/* Footer Note */}
-        <div className="mt-6 text-center">
-          <p className="text-sm text-gray-500">Thank you for your patronage</p>
+        <div className="mt-6  bg-lightGrey p-4 rounded-3xl">
+          <p className="text-sm text-grey200">NOTE</p>
+          <p className="text-sm text-gray-500"> {footerNote.note}</p>
         </div>
       </div>
     </div>

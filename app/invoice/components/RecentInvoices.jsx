@@ -1,70 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Invoice from "./Invoice";
 import InvoiceDetails from "../InvoiceDetails";
+import { getInvoices } from "../hooks/useInvoice";
 
 const RecentInvoices = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedInvoice, setSelectedInvoice] = useState(null);
-  // Dummy data for invoices
-  const invoices = [
-    {
-      id: 1,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Paid",
-      date: "27th November, 2022",
-    },
-    {
-      id: 2,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Overdue",
-      date: "27th November, 2022",
-    },
-    {
-      id: 3,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Draft",
-      date: "8th December, 2022",
-    },
-    {
-      id: 4,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Pending Payment",
-      date: "8th December, 2022",
-    },
-    {
-      id: 5,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Paid",
-      date: "8th December, 2022",
-    },
-    {
-      id: 6,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Paid",
-      date: "8th December, 2022",
-    },
-    {
-      id: 7,
-      number: "1023494 - 2304",
-      dueDate: "May 19th, 2023",
-      amount: "$1,311,750.12",
-      status: "Paid",
-      date: "8th December, 2022",
-    },
-  ];
+  const [invoices, setInvoices] = useState([]);
+  
+  // mock data for invoices
+  useEffect(() => {
+    const fetchInvoices = async () => {
+      const data = await getInvoices();
+      setInvoices(data);
+    };
+    fetchInvoices();
+  }, []);
 
   // Function to style the status badges
   const getStatusBadge = (status) => {
@@ -95,16 +47,20 @@ const RecentInvoices = () => {
       </div>
 
       {/* Invoice List */}
-      {invoices.map((invoice, index) => (
+      {invoices?.map((invoiceGroup, index) => (
         <div key={index} className="mb-4">
           {/* Date Heading */}
-          {(index === 0 || invoices[index - 1].date !== invoice.date) && (
+          {/* {(index === 0 || invoices[index - 1].date !== invoiceGroup?.date) && (
             <h3 className="text-base font-medium text-primaryBlack mb-4">
-              {invoice.date}
+              {invoiceGroup.date}
             </h3>
-          )}
+          )} */}
+          <h3 className="text-base font-medium text-primaryBlack mb-4">
+              {invoiceGroup.date}
+            </h3>
           {/* Invoice Row */}
-          <div
+          {invoiceGroup.items.map((invoice, idx) => (
+          <div key={idx}
             onClick={() => {
               setShowModal(true);
               setSelectedInvoice(invoice);
@@ -138,6 +94,7 @@ const RecentInvoices = () => {
               </span>
             </div>
           </div>
+           ))}
         </div>
       ))}
       <InvoiceDetails

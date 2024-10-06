@@ -1,8 +1,11 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import SummaryCard from "@/components/Cards/SummaryCard";
-import React from "react";
 import InvoiceAction from "./InvoiceAction";
+import { getInvoices } from "../hooks/useInvoice";
 
-const Header = () => {
+const Header = ({ data }) => {
+  
   return (
     <div>
       <div className="flex justify-between items-center mb-10">
@@ -27,7 +30,16 @@ const Header = () => {
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mb-10">
-        <SummaryCard
+        {data?.map((item, index) => (
+          <SummaryCard
+            key={index}
+            title={item.title}
+            total={item.total}
+            statusCount={item.statusCount}
+            kobo={item.kobo}
+          />
+        ))}
+        {/* <SummaryCard
           title="PAID"
           total="4,120,102"
           statusCount={"1,289"}
@@ -50,7 +62,7 @@ const Header = () => {
           total="87,102"
           statusCount={"06"}
           kobo={"00"}
-        />
+        /> */}
       </div>
       <InvoiceAction />
     </div>

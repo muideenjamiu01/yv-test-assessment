@@ -2,50 +2,8 @@ import React from "react";
 import profileImage from "../../../public/assets/svgs/profile.svg";
 import Image from "next/image";
 
-const activities = [
-  {
-    id: 1,
-    user: "Invoice creation",
-    time: "Today, 12:20 PM",
-    action: "Created invoice",
-    invoice: "00238434",
-    client: " /Olaniyi Ojo Adewale",
-  },
-  {
-    id: 2,
-    user: "Invoice creation",
-    time: "Today, 12:20 PM",
-    action: "Created invoice",
-    invoice: "00238434",
-    client: "/Olaniyi Ojo Adewale",
-  },
-  {
-    id: 3,
-    user: "Invoice creation",
-    time: "Today, 12:20 PM",
-    action: "Created invoice",
-    invoice: "00238434",
-    client: "/Olaniyi Ojo Adewale",
-  },
-  {
-    id: 4,
-    user: "Invoice creation",
-    time: "Today, 12:20 PM",
-    action: "Created invoice",
-    invoice: "00238434",
-    client: "/Olaniyi Ojo Adewale",
-  },
-  {
-    id: 5,
-    user: "Invoice creation",
-    time: "Today, 12:20 PM",
-    action: "Created invoice",
-    invoice: "00238434",
-    client: "/Olaniyi Ojo Adewale",
-  },
-];
-
-const RecentActivities = () => {
+const RecentActivities = ({ data }) => {
+  console.log(data, "active data");
   return (
     <div className="px-6 py-8 bg-white rounded-[40px] shadow-md">
       <div className="flex justify-between items-center mb-6">
@@ -57,7 +15,7 @@ const RecentActivities = () => {
         </button>
       </div>
       <div className="relative  space-y-6">
-        {activities.map((activity, index) => (
+        {data?.map((activity, index) => (
           <div key={activity.id} className="relative flex space-x-4">
             {/* User Avatar */}
             <div className="z-10 w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
