@@ -1,6 +1,102 @@
 {
   "invoices": [
-    { "id": 1, "name": "John Doe", "amount": 200, "status": "Paid" },
-    { "id": 2, "name": "Jane Doe", "amount": 300, "status": "Pending" }
+    {
+      "id": 1,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Paid",
+      "date": "27th November, 2022"
+    },
+    {
+      "id": 2,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Overdue",
+      "date": "27th November, 2022"
+    },
+    {
+      "id": 3,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Draft",
+      "date": "8th December, 2022"
+    },
+    {
+      "id": 4,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Pending Payment",
+      "date": "8th December, 2022"
+    },
+    {
+      "id": 5,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Paid",
+      "date": "8th December, 2022"
+    },
+    {
+      "id": 6,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Paid",
+      "date": "8th December, 2022"
+    },
+    {
+      "id": 7,
+      "number": "1023494 - 2304",
+      "dueDate": "May 19th, 2023",
+      "amount": "$1,311,750.12",
+      "status": "Paid",
+      "date": "8th December, 2022"
+    }
+  ],
+  "activities":[
+    {
+      "id": 1,
+      "user": "Invoice creation",
+      "time": "Today, 12:20 PM",
+      "action": "Created invoice",
+      "invoice": "00238434",
+      "client": " /Olaniyi Ojo Adewale"
+    },
+    {
+      "id": 2,
+      "user": "Invoice creation",
+      "time": "Today, 12:20 PM",
+      "action": "Created invoice",
+      "invoice": "00238434",
+      "client": "/Olaniyi Ojo Adewale"
+    },
+    {
+      "id": 3,
+      "user": "Invoice creation",
+      "time": "Today, 12:20 PM",
+      "action": "Created invoice",
+      "invoice": "00238434",
+      "client": "/Olaniyi Ojo Adewale"
+    },
+    {
+      "id": 4,
+      "user": "Invoice creation",
+      "time": "Today, 12:20 PM",
+      "action": "Created invoice",
+      "invoice": "00238434",
+      "client": "/Olaniyi Ojo Adewale"
+    },
+    {
+      "id": 5,
+      "user": "Invoice creation",
+      "time": "Today, 12:20 PM",
+      "action": "Created invoice",
+      "invoice": "00238434",
+      "client": "/Olaniyi Ojo Adewale"
+    }
   ]
 }
