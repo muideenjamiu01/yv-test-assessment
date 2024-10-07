@@ -1,8 +1,8 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { forwardRef } from "react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import HomeIcon from "../../public/assets/svgs/home-icon.svg"
@@ -45,19 +45,8 @@ const SidebarLink = ({ to, imageSrc, label, isActive, onClick }) => (
 );
 
 const Sidebar = forwardRef(({ showNav }, ref) => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    // Check if we're on the client side
-    if (typeof window !== "undefined") {
-      const userData = sessionStorage.getItem("user");
-      if (userData) {
-        setUser(JSON.parse(userData));
-      }
-    }
-  }, []);
+   const pathname = usePathname();
+ 
 
   return (
     <div
@@ -119,12 +108,7 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
               label="Settings"
               isActive={pathname == "/settings"}
               onClick={() => {}}
-            />
-
-           
-            
-            
-           
+            />     
           </div>
         </div>
    
