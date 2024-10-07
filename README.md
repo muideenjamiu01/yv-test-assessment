@@ -1,4 +1,4 @@
-## Invoicing App
+# Invoicing App
 
 
 ## Overview
