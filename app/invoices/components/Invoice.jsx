@@ -31,7 +31,7 @@ const calculateTotals = (items) => {
 const totals = calculateTotals(items);
 
   return (
-    <div className="rounded-[40px] shadow-sm p-6 bg-white border">
+    <div className="rounded-[40px] p-6 bg-white border">
       <div className="">
         <div className="bg-pink100 p-5 rounded-[40px] mb-6">
           <div className="flex flex-col md:flex-row justify-between mb-8">

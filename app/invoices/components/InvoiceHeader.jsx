@@ -70,7 +70,7 @@ const InvoiceHeader = ({ invoiceData }) => {
         <div className="hidden lg:flex items-center space-x-4">
           {/* Download as PDF */}
           <button
-            className="px-4 py-3  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primary  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="px-4 py-3  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primary  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             onClick={handleDownloadPDF}
           >
             Download as PDF
@@ -78,7 +78,7 @@ const InvoiceHeader = ({ invoiceData }) => {
 
           {/* Send Invoice */}
           <button
-            className="py-3 px-10  bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-3 px-10  bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             onClick={handleSendInvoice}
           >
             Send Invoice
@@ -87,7 +87,7 @@ const InvoiceHeader = ({ invoiceData }) => {
           {/* More dropdown */}
           <div className="relative">
             <button
-              className="py-3 px-6  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+              className="py-3 px-6  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
               onClick={handleMoreOptions}
             >
               More
@@ -95,7 +95,7 @@ const InvoiceHeader = ({ invoiceData }) => {
 
             {/* Dropdown menu */}
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md py-2">
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200  rounded-md py-2">
                 <button
                   className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
                   onClick={handleDuplicateInvoice}
@@ -123,7 +123,7 @@ const InvoiceHeader = ({ invoiceData }) => {
         <div className="flex  items-center lg:hidden space-x-4">
           {/* Download as PDF */}
           <button
-            className="py-3 px-2 md:py-3 md:px-6 text-xs md:text-base bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primary  transition ease-in duration-200 text-center  font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-3 px-2 md:py-3 md:px-6 text-xs md:text-base bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primary  transition ease-in duration-200 text-center  font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             onClick={handleDownloadPDF}
           >
             Download as PDF
@@ -131,7 +131,7 @@ const InvoiceHeader = ({ invoiceData }) => {
 
           {/* Send Invoice */}
           <button
-            className="py-3 px-2 md:py-3 md:px-6 text-xs md:text-base bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center  font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-3 px-2 md:py-3 md:px-6 text-xs md:text-base bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center  font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             onClick={handleSendInvoice}
           >
             Send Invoice
@@ -140,7 +140,7 @@ const InvoiceHeader = ({ invoiceData }) => {
           {/* More dropdown */}
           <div className="relative">
             <button
-              className="py-3 px-4 md:py-3 md:px-6 text-sm md:text-base  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+              className="py-3 px-4 md:py-3 md:px-6 text-sm md:text-base  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
               onClick={handleMoreOptions}
             >
               More
@@ -148,7 +148,7 @@ const InvoiceHeader = ({ invoiceData }) => {
 
             {/* Dropdown menu */}
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md py-2">
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200  rounded-md py-2">
                 <button
                   className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
                   onClick={handleDuplicateInvoice}

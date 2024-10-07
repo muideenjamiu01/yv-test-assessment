@@ -100,7 +100,7 @@ const SignUpForm = () => {
               {/* Email */}
               <div className="flex flex-col mb-6">
                 <div className="flex relative  ">
-                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500  text-sm">
                     <svg
                       width="15"
                       height="15"
@@ -115,7 +115,7 @@ const SignUpForm = () => {
                     type="text"
                     id="email"
                     name="email"
-                    className="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-3 px-4 bg-transparent text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]   hover:border-[#46B2C8] focus:border-transparent"
+                    className="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-3 px-4 bg-transparent text-gray-700 placeholder-gray-400  text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]   hover:border-[#46B2C8] focus:border-transparent"
                     placeholder="Enter email address"
                   />
                 </div>
@@ -130,7 +130,7 @@ const SignUpForm = () => {
               <div className="flex flex-col gap-2">
                 <div className="flex relative focus:border-[#46B2C8]  hover:border-[#46B2C8]
                 ">
-                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-[#46B2C8] text-gray-500 shadow-sm text-sm">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-[#46B2C8] text-gray-500  text-sm">
                     <svg
                       width="15"
                       height="15"
@@ -145,13 +145,13 @@ const SignUpForm = () => {
                     type={showPassword ? "text" : "password"}
                     id="password"
                     name="password"
-                    className="flex-1 appearance-none border-l border-b border-t  border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]  hover:border-[#46B2C8] focus:border-transparent"
+                    className="flex-1 appearance-none border-l border-b border-t  border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400  text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]  hover:border-[#46B2C8] focus:border-transparent"
                     placeholder="Enter your password"
                   />
                   <button
                     type="button"
                     onClick={togglePasswordVisibility}
-                    className="inline-flex rounded-r-lg  appearance-none  items-center px-3 border-t bg-white border-r border-b border-gray-300 text-gray-500 shadow-sm text-sm cursor-pointer focus:outline-none "
+                    className="inline-flex rounded-r-lg  appearance-none  items-center px-3 border-t bg-white border-r border-b border-gray-300 text-gray-500  text-sm cursor-pointer focus:outline-none "
                   >
                     {showPassword ? (
                       <AiOutlineEye />

@@ -76,13 +76,13 @@ const mappedStatus = mapInvoiceStatus(invoices.flatMap(invoice => invoice.items)
         <div className="flex gap-4 items-center ">
           <button
             type="button"
-            className="py-3 px-4 text-sm   bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center  font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-3 px-4 text-sm   bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center  font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             see what’s new
           </button>
           <button
             type="button"
-            className="py-3 px-6  text-sm   bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center  font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-3 px-6  text-sm   bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center  font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             Create
           </button>
