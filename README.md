@@ -1,5 +1,5 @@
-## Project Name
-Invoicing App
+## Invoicing App
+
 
 ## Overview
 This is a simple invoicing application designed based on the provided Figma design. It includes user authentication (using Firebase), a mock backend, real-time data flow, unit and integration tests for key components, and responsive UI across devices.
