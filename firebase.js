@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore'; //for access to Firestore
 import { EmailAuthProvider } from 'firebase/auth'; //for email and password authentication
 import { getAuth } from 'firebase/auth'; // for access to authentication
@@ -22,7 +21,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
 
 const provider = new EmailAuthProvider();
 const auth = getAuth(app);
