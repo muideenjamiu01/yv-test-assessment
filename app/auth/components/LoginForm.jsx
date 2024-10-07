@@ -15,12 +15,10 @@ import Logo from "../../../public/assets/logo/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 
-
 const LoginForm = () => {
   const router = useRouter();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -29,7 +27,7 @@ const LoginForm = () => {
   const initialValues = {
     email: "",
     password: "",
-      };
+  };
 
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -48,9 +46,8 @@ const LoginForm = () => {
       );
       const user = userCredential.user;
       sessionStorage.setItem("user", JSON.stringify(user));
-      
       router.push("/invoices");
-      toast.success("Login successful!");
+      toast.success("Login successful!, You will be redirected shortly");
       setIsLoggedIn(true);
     } catch (error) {
       const errorMessage = error.message || "Login failed. Please try again.";
@@ -78,12 +75,12 @@ const LoginForm = () => {
                 className="mb-10"
               />
               <div className="mb-10">
-              <p className="text-lightPrimary text-2xl sm:text-3xl font-normal ">
-                Login to Your Dashboard
-              </p>
-              <div className="mt-1 space-y-6">
-                <div>Sign into your Invoice application account</div>
-              </div>
+                <p className="text-lightPrimary text-2xl sm:text-3xl font-normal ">
+                  Login to Your Dashboard
+                </p>
+                <div className="mt-1 space-y-6">
+                  <div>Sign into your Invoice application account</div>
+                </div>
               </div>
             </div>
 
@@ -119,8 +116,10 @@ const LoginForm = () => {
 
               {/* Password */}
               <div className="flex flex-col gap-2">
-                <div className="flex relative focus:border-[#46B2C8]  hover:border-[#46B2C8]
-                ">
+                <div
+                  className="flex relative focus:border-[#46B2C8]  hover:border-[#46B2C8]
+                "
+                >
                   <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-[#46B2C8] text-gray-500  text-sm">
                     <svg
                       width="15"
@@ -141,6 +140,7 @@ const LoginForm = () => {
                   />
                   <button
                     type="button"
+                    aria-label="Toggle password visibility" 
                     onClick={togglePasswordVisibility}
                     className="inline-flex rounded-r-lg  appearance-none  items-center px-3 border-t bg-white border-r border-b border-gray-300 text-gray-500  text-sm cursor-pointer focus:outline-none "
                   >
@@ -180,8 +180,6 @@ const LoginForm = () => {
                   <div className="flex justify-center">
                     <BeatLoader color="#fff" />
                   </div>
-                ) : isLoggedIn ? (
-                  "Logged in"
                 ) : (
                   "Login"
                 )}
