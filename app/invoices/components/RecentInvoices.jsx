@@ -6,6 +6,12 @@ import moment from 'moment';
 const RecentInvoices = ({invoices}) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedInvoice, setSelectedInvoice] = useState(null);
+  const [invoiceLength, setInvoiceLength] = useState(0);
+
+  const [resultsDisplayLimit, setResultsDisplayLimit] = useState(6);
+  const increaseDisplayLimit = () => {
+    setResultsDisplayLimit(resultsDisplayLimit + 9);
+  };
  
 console.log(invoices," are you here")
   // Function to style the status badges
@@ -42,7 +48,7 @@ console.log(invoices," are you here")
   
     return `${dayWithOrdinal.toUpperCase()} ${date.format('MMMM, YYYY').toUpperCase()}`;
   };
-
+console.log(invoiceLength,"invoiceLength")
   return (
     <div className="bg-white p-5 md:p-10 rounded-[20px] md:rounded-[40px] shadow-md">
       {/* Header */}
@@ -50,14 +56,16 @@ console.log(invoices," are you here")
         <h2 className="font-medium text-base md:text-lg  text-primaryBlack">
           Recent Invoices
         </h2>
-        <button className="tracking-[1px] text-sm bg-transparent font-medium border border-[#E3E6EF] text-primary rounded-full px-4 py-3 ">
+        {/* {resultsDisplayLimit < invoiceLength?.length && ( */}
+        <button type="button" onClick={increaseDisplayLimit} className="tracking-[1px] text-sm bg-transparent font-medium border border-[#E3E6EF] text-primary rounded-full px-4 py-3 ">
           View All Invoices
         </button>
+        {/* )} */}
       </div>
 
       {/* Invoice List */}
       {invoices?.map((invoiceGroup, index) => (
-        <div key={index} className="mb-4">
+        <div key={index} onClick={() => setInvoiceLength(invoiceGroup?.items)} className="mb-4">
           <h3 className="text-base font-medium text-primaryBlack mb-4">
             {formatDateWithOrdinal(invoiceGroup.date)}
           </h3>

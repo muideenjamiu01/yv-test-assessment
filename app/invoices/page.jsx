@@ -36,7 +36,7 @@ const InvoicePage = () => {
   return (
     <div className="container mx-auto p-4">
     <div className="py-10 md:px-8 ">
-      {loading  ? (
+      {loading ? (
         <div className="mt-10 flex justify-center items-center h-screen">
           <RingLoader color="#003EFF" />
           <p className="mt-4">Loading...</p>

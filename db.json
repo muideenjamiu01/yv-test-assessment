@@ -564,6 +564,1116 @@
               "client": "Olaniyi Ojo Adewale"
             }
           ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
+        },
+        {
+          "id": "INV-2023-005",
+          "number": "1023494 - 2305",
+          "dueDate": "2024-10-10T09:00:00Z",
+          "amount": "$1,311,750.12",
+          "status": "Paid",
+          "date": "2024-08-20T09:00:00Z",
+          "details": {
+            "sender": {
+              "name": "MMj Autos",
+              "phone": "+234 808 371173",
+              "address": "456 Hart Ridge Road 49426 Gaines, MI",
+              "email": "hello@fabulousent.co",
+              "logo": "/path/to/sender-image.png"
+            },
+            "customer": {
+              "name": "Olanleji Ojo Adewale",
+              "phone": "+234 805 181 2309",
+              "email": "info@olanlejiade.com"
+            },
+            "invoiceDetails": {
+              "invoiceNo": "#322305500",
+              "issueDate": "March 20th, 2023",
+              "dueDate": "May 19th, 2023",
+              "billingCurrency": "USD ($)"
+            },
+            "items": [
+              {
+                "description": "Email Marketing",
+                "quantity": 10,
+                "unitPrice": 1500,
+                "total": 15000,
+                "notes": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              },
+              {
+                "description": "Graphic design for emails",
+                "quantity": 7,
+                "unitPrice": 32750,
+                "total": 229250
+              },
+              {
+                "description": "Video looping effect",
+                "quantity": 6,
+                "unitPrice": 110500,
+                "total": 663000
+              }
+            ],
+            "totals": {
+              "subTotal": 6697200,
+              "discount": "2.5%",
+              "totalAmountDue": 6529770
+            },
+            "paymentInfo": {
+              "accountName": "Fabulous Enterprise",
+              "accountNumber": "3223055000",
+              "achRoutingNo": "123456789",
+              "bankName": "XYZ Bank",
+              "bankAddress": "Lagos, Nigeria",
+              "bankBranch": "Lagos, Nigeria"
+            },
+            "footerNote": {
+              "note": "Thank you for your patronage"
+            }
+          },
+          "invoiceActivities": [
+            {
+              "id": 1,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Created invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 2,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            },
+            {
+              "id": 3,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a partial payment of",
+              "amount": "$503,000.00"
+            },
+            {
+              "id": 4,
+              "user": "Payment Confirmed",
+              "time": "Today, 12:20 PM",
+              "action": "You manually confirmed a full payment of",
+              "amount": "$6,000,000.00"
+            },
+            {
+              "id": 5,
+              "user": "You",
+              "time": "Today, 12:20 PM",
+              "action": "Sent invoice",
+              "invoice": "00238434",
+              "client": "Olaniyi Ojo Adewale"
+            }
+          ]
         }
       ]
     } 

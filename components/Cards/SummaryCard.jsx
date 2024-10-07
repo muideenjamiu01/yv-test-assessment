@@ -32,12 +32,12 @@ const SummaryCard = ({ title, total, statusCount, kobo }) => {
                   ? "bg-pink"
                   : title === "DRAFT"
                   ? "bg-grey300"
-                  : title === "pending"
+                  : title === "PENDING"
                   ? "bg-gold"
                   : ""
               }`}
             >
-              {statusCount}
+              {statusCount.toString().padStart(2, "0")}
             </p>
           </div>
           <div className="flex items-center mt-2">

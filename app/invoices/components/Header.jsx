@@ -5,8 +5,7 @@ import InvoiceAction from "./InvoiceAction";
 
 
 const Header = ({ invoices }) => {
-  console.log(invoices, "invoices");
-
+  
   function mapInvoiceStatus(invoices) {
     const statusMap = {};
 
@@ -48,13 +47,7 @@ const Header = ({ invoices }) => {
     return result;
 }
 
-
-
-
 const mappedStatus = mapInvoiceStatus(invoices.flatMap(invoice => invoice.items));
-console.log(mappedStatus, "mappedStatus");
-
-
 
   return (
     <div className="container mx-auto p-4">
