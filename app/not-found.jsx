@@ -32,16 +32,16 @@ const NotFound = () => {
               </div>
               <div class="hidden space-x-4 md:flex md:items-center md:justify-end">
                 <Link
-                  href="/"
+                  href="/overview"
                   class="px-3 py-2 text-gray-400 uppercase transition duration-200 ease-in hover:text-gray-700 focus:outline-none"
                 >
-                  Login
+                  Home
                 </Link>
                 <Link
-                  href="/signup"
+                  href="/invoices"
                   class="px-3 py-2 text-gray-400 uppercase transition duration-200 ease-in hover:text-gray-700 focus:outline-none"
                 >
-                  Register
+                  Invoices
                 </Link>
               </div>
             </div>
@@ -54,7 +54,7 @@ const NotFound = () => {
                 Sorry, this page isn&#x27;t available
               </h1>
               <Link
-                href="/"
+                href="/overview"
                 class="px-2 py-2 mt-16 text-lg font-light transition duration-200 ease-in bg-yellow-300 border-2 border-gray-700 w-36 hover:bg-yellow-400 focus:outline-none"
               >
                 Go back home
@@ -63,7 +63,7 @@ const NotFound = () => {
             <div class="relative block w-full max-w-md mx-auto md:mt-0 lg:max-w-2xl">
               <Image
                 src={notFoundImage}
-                alt="not-foun-image"
+                alt="not-found-image"
                 style={{
                   width: "auto",
                   height: "auto",

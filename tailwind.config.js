@@ -84,8 +84,7 @@ module.exports = {
         ],
       },
       backgroundImage: {
-        loginInnerBg: "url('/assets/images/login-inner-bg.png')",
-        loginBackground: "url('/assets/images/login-background.png')",
+        loginBackground: "url('/assets/svgs/vForms.svg')",
       },
     },
   },

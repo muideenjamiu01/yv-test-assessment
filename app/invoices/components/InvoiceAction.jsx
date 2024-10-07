@@ -11,7 +11,7 @@ const InvoiceAction = () => {
       <h1 className="font-medium text-xl text-primaryDarkGrey mb-6">
         Invoice Actions
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 items-center mb-6">
         <div
           className={`relative w-full text-white h-fit overflow-hidden bg-primary shadow-xl rounded-3xl p-6`}
         >
@@ -26,7 +26,7 @@ const InvoiceAction = () => {
               quality={100}
             />
           </div>
-          <p className=" text-[#F6F8FA] text-[22px] font-medium">
+          <p className="text-[#F6F8FA] text-[22px] font-medium">
             Create New Invoice
           </p>
           <p className="text-[#F6F8FA] text-sm font-normal">
@@ -34,7 +34,7 @@ const InvoiceAction = () => {
           </p>
         </div>
         <div
-          className={`relative w-full  h-fit overflow-hidden bg-white shadow-xl rounded-3xl p-6`}
+          className={`relative w-full h-fit overflow-hidden bg-white shadow-xl rounded-3xl p-6`}
         >
           <div className="mb-4">
             <Image
@@ -47,11 +47,11 @@ const InvoiceAction = () => {
               quality={100}
             />
           </div>
-          <p className=" text-primaryDarkGrey text-[22px] font-medium">
-          Change Invoice settings
+          <p className="text-primaryDarkGrey text-[22px] font-medium">
+            Change Invoice settings
           </p>
           <p className="text-primaryGrey text-sm font-normal">
-          Customise your invoices
+            Customise your invoices
           </p>
         </div>
         <div
@@ -68,15 +68,15 @@ const InvoiceAction = () => {
               quality={100}
             />
           </div>
-          <p className=" text-primaryDarkGrey text-[22px] font-medium">
-          Manage Customer list
+          <p className="text-primaryDarkGrey text-[22px] font-medium">
+            Manage Customer list
           </p>
           <p className="text-primaryGrey text-sm font-normal">
-          Add and remove customers
+            Add and remove customers
           </p>
         </div>
       </div>
-      {/* <InvoiceCard className={"bg-primaryGrey text-white"}  imageSrc={moneyIcon}/> */}
+      {/* <InvoiceCard className={"bg-primaryGrey text-white"} imageSrc={moneyIcon}/> */}
     </div>
   );
 };

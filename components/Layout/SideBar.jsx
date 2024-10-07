@@ -92,10 +92,10 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
             />
 
             <SidebarLink
-              to="/invoice"
+              to="/invoices"
               imageSrc={receiptIcon}
               label="Invoice"
-              isActive={pathname == "/invoice"}
+              isActive={pathname == "/invoices"}
               onClick={() => {}}
             />
             <SidebarLink

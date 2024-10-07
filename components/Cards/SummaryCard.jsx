@@ -32,7 +32,7 @@ const SummaryCard = ({ title, total, statusCount, kobo }) => {
                   ? "bg-pink"
                   : title === "DRAFT"
                   ? "bg-grey300"
-                  : title === "UNPAID"
+                  : title === "pending"
                   ? "bg-gold"
                   : ""
               }`}

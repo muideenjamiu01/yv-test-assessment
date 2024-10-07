@@ -18,9 +18,9 @@ export const getInvoices = async () => {
       throw error;
     }
   };
-export const getSummaryData = async () => {
+export const getResentActivities = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/summary");
+      const response = await axios.get("http://localhost:4000/activities");
       return response.data;
     } catch (error) {
       if (error.response) {

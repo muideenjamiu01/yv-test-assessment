@@ -1,9 +1,9 @@
 // src/app/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import atcReducer from "./features/atcSlice";
+import userReducer from "./features/user";
 
 export const store = configureStore({
   reducer: {
-     atcReducer,
+         userReducer
   },
 });

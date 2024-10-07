@@ -3,7 +3,7 @@ import profileImage from "../../../public/assets/svgs/profile.svg";
 import Image from "next/image";
 
 const RecentActivities = ({ data }) => {
-  console.log(data, "active data");
+  
   return (
     <div className="px-6 py-8 bg-white rounded-[40px] shadow-md">
       <div className="flex justify-between items-center mb-6">

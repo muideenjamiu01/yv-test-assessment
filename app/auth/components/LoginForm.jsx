@@ -4,52 +4,61 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { toast } from "react-toastify";
-import CryptoJS from "crypto-js";
+
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
 
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../../firebase';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase";
 
-import Link from 'next/link'
+import Logo from "../../../public/assets/logo/logo.svg";
+import Link from "next/link";
+import Image from "next/image";
+
 
 const LoginForm = () => {
   const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const key = process.env.NEXT_PUBLIC_SECRET_KEY;
+
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
   const initialValues = {
     email: "",
     password: "",
-    rememberMe: false,
-  };
+      };
 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email address").required("Required"),
-    password: Yup.string().required("Password is Required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("The Email field is required"),
+    password: Yup.string().required("Password is required"),
   });
 
   const handleLogin = async (values, { setSubmitting }) => {
     setSubmitting(true);
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password
+      );
       const user = userCredential.user;
-      console.log(user, "user");
-      router.push("/invoice");
+      sessionStorage.setItem("user", JSON.stringify(user));
+      
+      router.push("/invoices");
       toast.success("Login successful!");
       setIsLoggedIn(true);
-    } catch (error) {      
+    } catch (error) {
       const errorMessage = error.message || "Login failed. Please try again.";
       toast.error(errorMessage);
     } finally {
       setSubmitting(false);
     }
   };
-  
 
   return (
     <Formik
@@ -60,19 +69,28 @@ const LoginForm = () => {
       {({ isSubmitting }) => (
         <Form>
           <div className="w-full bg-white">
-            <div className="flex  flex-col items-center justify-center w-full  overflow-hidden">
-              <h1 className="text-2xl font-bold text-primary text-center mb-4">
-                SE
-              </h1>
-              <p className="text-lightPrimary text-base font-medium mb-10">
+            <div className="flex  flex-col  w-full  overflow-hidden">
+              <Image
+                src={Logo}
+                alt="Logo"
+                width={150}
+                height={"auto"}
+                className="mb-10"
+              />
+              <div className="mb-10">
+              <p className="text-lightPrimary text-2xl sm:text-3xl font-normal ">
                 Login to Your Dashboard
               </p>
+              <div className="mt-1 space-y-6">
+                <div>Sign into your Invoice application account</div>
+              </div>
+              </div>
             </div>
 
             <div className="mb-6">
               {/* Email */}
               <div className="flex flex-col mb-6">
-                <div className="flex relative  hover:border-primary">
+                <div className="flex relative  ">
                   <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                     <svg
                       width="15"
@@ -88,7 +106,7 @@ const LoginForm = () => {
                     type="text"
                     id="email"
                     name="email"
-                    className="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary   hover:border-primary focus:border-transparent"
+                    className="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-3 px-4 bg-transparent text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]   hover:border-[#46B2C8] focus:border-transparent"
                     placeholder="Enter email address"
                   />
                 </div>
@@ -101,8 +119,9 @@ const LoginForm = () => {
 
               {/* Password */}
               <div className="flex flex-col gap-2">
-                <div className="flex relative focus:border-primary  hover:border-primary">
-                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-primary text-gray-500 shadow-sm text-sm">
+                <div className="flex relative focus:border-[#46B2C8]  hover:border-[#46B2C8]
+                ">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-[#46B2C8] text-gray-500 shadow-sm text-sm">
                     <svg
                       width="15"
                       height="15"
@@ -117,8 +136,8 @@ const LoginForm = () => {
                     type={showPassword ? "text" : "password"}
                     id="password"
                     name="password"
-                    className="flex-1 appearance-none border-l border-b border-t  border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary  hover:border-primary focus:border-transparent"
-                    placeholder="Enter Admin Code"
+                    className="flex-1 appearance-none border-l border-b border-t  border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]  hover:border-[#46B2C8] focus:border-transparent"
+                    placeholder="Enter your password"
                   />
                   <button
                     type="button"
@@ -139,51 +158,35 @@ const LoginForm = () => {
                 />
               </div>
             </div>
-            {/* Remember Me */}
-            <div className="flex items-center justify-between  mb-2 -mt-4 w-full">
-              <div className="flex items-center">
-                <Field
-                  type="checkbox"
-                  id="rememberMe"
-                  name="rememberMe"
-                  className="p-4 text-sideBarBlue focus:ring-darkGreen border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="rememberMe"
-                  className="ml-2 block font-medium text-sm text-gray-900"
-                >
-                  Remember me
-                </label>
-              </div>
-              <div className="text-sm">
+
+            <div className="flex items-center justify-end  mb-10 -mt-4 w-full">
+              <div className="text-sm text-primaryGrey ">
+                Don&apos;t Have An Account?
                 <Link
-                  href="/signup"
-                  className="font-bold text-sm  text-darkGreen hover:text-darkGreen/90"
+                  href="/auth/register"
+                  className="ml-2 font-bold text-sm  text-[#46B2C8] hover:text-darkGreen/90"
                 >
-                  Dont have an account?
+                  Sign Up
                 </Link>
               </div>
-             
-
-             
             </div>
             <div className="flex">
-                <button
-                  type="submit"
-                  disabled={isSubmitting || isLoggedIn}
-                  className="bg-primary hover:bg-primary/70 text-white w-full mt-2  rounded-md cursor-pointer font-bold py-2 px-6"
-                >
-                  {isSubmitting ? (
-                    <div className="flex justify-center">
-                      <BeatLoader color="#fff" />
-                    </div>
-                  ) : isLoggedIn ? (
-                    "Logged in"
-                  ) : (
-                    "Login"
-                  )}
-                </button>
-              </div>
+              <button
+                type="submit"
+                disabled={isSubmitting || isLoggedIn}
+                className="bg-[#46B2C8] hover:bg-#46B2C8/70 text-white w-full mt-2  rounded-md cursor-pointer font-bold py-3 px-6"
+              >
+                {isSubmitting ? (
+                  <div className="flex justify-center">
+                    <BeatLoader color="#fff" />
+                  </div>
+                ) : isLoggedIn ? (
+                  "Logged in"
+                ) : (
+                  "Login"
+                )}
+              </button>
+            </div>
             <br />
             {/* Submit Button */}
           </div>
