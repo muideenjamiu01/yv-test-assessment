@@ -1,8 +1,13 @@
-import React from 'react'
+'use client'
+import InvoicePage from "./InvoicePage"
+
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className="py-10 md:px-8 h-full">
+      overview
+<InvoicePage />
+    </div>
   )
 }
 

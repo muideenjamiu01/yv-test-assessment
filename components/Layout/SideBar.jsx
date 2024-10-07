@@ -5,33 +5,39 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
-import {
-  MdBusiness,
-  MdDashboard,
-  MdOutlinePayments,
-  MdOutlineQrCodeScanner,
-  MdLeaderboard,
-} from "react-icons/md";
-import { ImUserTie } from "react-icons/im";
-import Logo from "../../../public/assets/logo/big.svg";
-import { TbUsersGroup, TbUserCheck, TbWallet } from "react-icons/tb";
-import { FaUser } from "react-icons/fa";
-import { HiOutlineTicket } from "react-icons/hi";
-import { GiVote } from "react-icons/gi";
+import HomeIcon from "../../public/assets/svgs/home-icon.svg"
+import OverviewIcon from "../../public/assets/svgs/dashboard.svg"
+import userIcon from "../../public/assets/svgs/user-icon.svg"
+import receiptIcon from "../../public/assets/svgs/receipt-item.svg"
+import messageIcon from "../../public/assets/svgs/message-question.svg"
+import settingsIcon from "../../public/assets/svgs/setting.svg"
 
-const SidebarLink = ({ to, icon, label, isActive, onClick, subMenus }) => (
+
+
+const SidebarLink = ({ to, imageSrc, label, isActive, onClick }) => (
   <div onClick={onClick} className="cursor-pointer mb-2 ">
     <Link href={to}>
       <div
-        className={`px-4 py-2 text-[#64748B] text-center flex items-center transition-colors duration-200 ${
+        className={`p-4 text-[#697598] font-normal text-sm text-center flex items-center transition-colors duration-200 ${
           isActive
-            ? "bg-white text-primary rounded-lg text-lg font-bold mx-0"
-            : "text-white hover:bg-white hover:text-primary rounded-md"
+            ? "bg-white text-[#4F4F4F]  border-4 border-[#F8F8FB] rounded-full text-sm font-bold mx-0"
+            : "hover:text-gray-800 hover:bg-gray-100 hover:bg-border-2 hover:border-[#F8F8FB]  rounded-full"
         }`}
       >
-        <div className="mr-2">{icon}</div>
+        <div className="mr-2">
+          <Image
+            src={imageSrc}
+            alt="icon"
+            style={{
+              width: "20px",
+              height: "auto",
+            }}
+            quality={100}
+            
+          />
+        </div>
         <div>
-          <p className="text-base font-medium">{label}</p>
+          <p className="text-sm font-normal">{label}</p>
         </div>
       </div>
     </Link>
@@ -56,125 +62,72 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-[#30143B] shadow-2xl fixed w-56 h-screen overflow-y-auto z-50"
+      className="bg-white shadow-2xl fixed w-56 h-screen overflow-y-auto z-50"
     >
-      <div className="flex justify-center  bg-white">
-        <Image
-          src={Logo}
-          alt="prb-logo"
-          style={{
-            width: "120px",
-            height: "auto",
-          }}
-          quality={100}
-        />
-      </div>
-      {user?.role === "Steward" ? (
+        
         <div className="pt-4 flex justify-center">
           <div className="flex flex-col">
-            <SidebarLink
-              to="/admin/scanner"
-              icon={<MdOutlineQrCodeScanner className="h-5 w-5" />}
-              label="Ticket Scanner"
-              isActive={pathname === "/admin/scanner"}
+          <SidebarLink
+              to="/start-page"
+              imageSrc={HomeIcon}
+              // icon={<RiHome5Line className="h-5 w-5" />}
+              label="Getting Started"
+              isActive={pathname == "/start-page"}
               onClick={() => {}}
             />
-          </div>
-        </div>
-      ) : (
-        <div className="pt-4 flex justify-center">
-          <div className="flex flex-col">
             <SidebarLink
-              to="/admin/overview"
-              icon={<MdDashboard className="h-5 w-5" />}
+              to="/overview"
+              imageSrc={OverviewIcon}
               label="Overview"
-              isActive={pathname === "/admin/overview"}
+              isActive={pathname == "/overview"}
               onClick={() => {}}
-            />
+            />           
+
             <SidebarLink
-              to="/admin/sponsor"
-              icon={<ImUserTie className="h-5 w-5" />}
-              label="Sponsor"
-              isActive={pathname === "/admin/sponsor"}
+              to="/accounts"
+              imageSrc={userIcon }
+              label="Accounts"
+              isActive={pathname == "/accounts"}
               onClick={() => {}}
             />
 
             <SidebarLink
-              to="/admin/participants"
-              icon={<TbUsersGroup className="h-5 w-5" />}
-              label="Participants"
-              isActive={pathname === "/admin/participants"}
+              to="/invoices"
+              imageSrc={receiptIcon}
+              label="Invoice"
+              isActive={pathname == "/invoices"}
+              onClick={() => {}}
+            />
+            <SidebarLink
+              to="/beneficiary-management"
+              imageSrc={userIcon}
+              label="Beneficiary Management"
+              isActive={pathname == "/beneficiary-management"}
+              onClick={() => {}}
+            />
+            
+            <SidebarLink
+              to="/help-center"
+              imageSrc={messageIcon}
+              label="Help Center"
+              isActive={pathname == "/help-center"}
+              onClick={() => {}}
+            />
+            <SidebarLink
+              to="/settings"
+              imageSrc={settingsIcon}
+              label="Settings"
+              isActive={pathname == "/settings"}
               onClick={() => {}}
             />
 
-            <SidebarLink
-              to="/admin/attendees"
-              icon={<TbUserCheck className="h-5 w-5" />}
-              label="Attendees"
-              isActive={pathname === "/admin/attendees"}
-              onClick={() => {}}
-            />
-            <SidebarLink
-              to="/admin/revenue"
-              icon={<TbWallet className="h-5 w-5" />}
-              label="Revenue"
-              isActive={pathname === "/admin/revenue"}
-              onClick={() => {}}
-            />
-            {/* Add more links as needed */}
-            <SidebarLink
-              to="/admin/tickets"
-              icon={<HiOutlineTicket className="h-5 w-5" />}
-              label="Tickets"
-              isActive={pathname === "/admin/tickets"}
-              onClick={() => {}}
-            />
-
-            <SidebarLink
-              to="/admin/users"
-              icon={<FaUser className="h-5 w-5" />}
-              label="Users"
-              isActive={pathname === "/admin/users"}
-              onClick={() => {}}
-            />
-            <SidebarLink
-              to="/admin/update-payment"
-              icon={<MdOutlinePayments className="h-5 w-5" />}
-              label="Update Payment"
-              isActive={pathname === "/admin/update-payment"}
-              onClick={() => {}}
-            />
-            <SidebarLink
-              to="/admin/votes"
-              icon={<GiVote className="h-5 w-5" />}
-              label="Votes "
-              isActive={pathname === "/admin/votes"}
-              onClick={() => {}}
-            />
-            <SidebarLink
-              to="/admin/complimentary"
-              icon={<MdBusiness className="h-5 w-5" />}
-              label="Complimentary "
-              isActive={pathname === "/admin/complimentary"}
-              onClick={() => {}}
-            />
-            <SidebarLink
-              to="/admin/leaderboard"
-              icon={<MdLeaderboard className="h-5 w-5" />}
-              label="LeaderBoard "
-              isActive={pathname === "/admin/leaderboard"}
-              onClick={() => {}}
-            />
-            <SidebarLink
-              to="/admin/scanner"
-              icon={<MdOutlineQrCodeScanner className="h-5 w-5" />}
-              label="Ticket Scanner"
-              isActive={pathname === "/admin/scanner"}
-              onClick={() => {}}
-            />
+           
+            
+            
+           
           </div>
         </div>
-      )}
+   
     </div>
   );
 });
