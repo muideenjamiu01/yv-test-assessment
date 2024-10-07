@@ -60,13 +60,13 @@ const mappedStatus = mapInvoiceStatus(invoices.flatMap(invoice => invoice.items)
         <div className="hidden lg:flex gap-8 items-center ">
           <button
             type="button"
-            className="py-3 px-6  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="uppercase py-3 px-6  bg-white hover:text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-primaryGrey  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             see what’s new
           </button>
           <button
             type="button"
-            className="py-3 px-10  bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="uppercase  py-3 px-10  bg-primary hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center text-base font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             Create
           </button>

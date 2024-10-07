@@ -50,14 +50,14 @@ console.log(invoices," are you here")
   };
 console.log(invoiceLength,"invoiceLength")
   return (
-    <div className="bg-white p-5 md:p-10 rounded-[20px] md:rounded-[40px] shadow-md">
+    <div className="bg-white p-5 md:p-10 rounded-[20px] md:rounded-[40px]">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="font-medium text-base md:text-lg  text-primaryBlack">
           Recent Invoices
         </h2>
         {/* {resultsDisplayLimit < invoiceLength?.length && ( */}
-        <button type="button" onClick={increaseDisplayLimit} className="tracking-[1px] text-sm bg-transparent font-medium border border-[#E3E6EF] text-primary rounded-full px-4 py-3 ">
+        <button type="button" onClick={increaseDisplayLimit} className="uppercase  tracking-[1px] text-sm bg-transparent font-medium border border-[#E3E6EF] text-primary rounded-full px-4 py-3 ">
           View All Invoices
         </button>
         {/* )} */}

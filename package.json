@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "websocket-server": "node websocket-server.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.9",
@@ -29,6 +30,7 @@
     "react-to-print": "^3.0.1",
     "react-toastify": "^10.0.5",
     "socket.io-client": "^4.8.0",
+    "ws": "^8.18.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

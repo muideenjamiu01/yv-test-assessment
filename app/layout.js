@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ReduxProvider from "@/components/Providers/ReduxProvider";
 
 const neuehaas = localFont({
   src: [
@@ -94,8 +93,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${neuehaas.variable} font-sans select-none`}>
       <body suppressHydrationWarning={true}>
-        <ReduxProvider>{children}</ReduxProvider>
-        <ToastContainer autoClose={2000} />       
+        {children}
+        <ToastContainer autoClose={2000} />
       </body>
     </html>
   );

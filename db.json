@@ -1676,42 +1676,6 @@
           ]
         }
       ]
-    } 
-      ],
-  "activities": [
-      {
-        "id": 1,
-        "user": "Invoice creation",
-        "time": "Today, 12:20 PM",
-        "action": "Created invoice",
-        "invoice": "00238434",
-        "client": "John Doe"
-      },
-      {
-        "id": 2,
-        "user": "Invoice creation",
-        "time": "Today, 12:20 PM",
-        "action": "Created invoice",
-        "invoice": "00238434",
-        "client": "Jane Smith"
-      },
-      {
-        "id": 3,
-        "user": "Invoice creation",
-        "time": "Today, 12:20 PM",
-        "action": "Created invoice",
-        "invoice": "00238434",
-        "client": "Bob Johnson"
-      },
-      {
-        "id": 4,
-        "user": "Invoice creation",
-        "time": "Today, 12:20 PM",
-        "action": "Created invoice",
-        "invoice": "00238434",
-        "client": "Alice Brown"
-      }
-    ]
-  
- 
+    }
+  ]
 }

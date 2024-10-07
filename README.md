@@ -51,6 +51,9 @@ bun dev
 ## To Run the mock backend
  - npx json-server --watch db.json --port 4000
 
+## To Start web socket
+ - npm run websocket-server
+
 
  ### Frontend Test Url
 - https://yv-test-assessment-lk53.vercel.app/

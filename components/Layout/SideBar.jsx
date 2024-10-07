@@ -51,13 +51,13 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-white shadow-2xl fixed w-56 h-screen overflow-y-auto z-50"
+      className="bg-white  fixed w-56 h-screen overflow-y-auto z-50"
     >
         
         <div className="pt-4 flex justify-center">
           <div className="flex flex-col">
           <SidebarLink
-              to="/start-page"
+              to="#"
               imageSrc={HomeIcon}
               // icon={<RiHome5Line className="h-5 w-5" />}
               label="Getting Started"
@@ -65,7 +65,7 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
               onClick={() => {}}
             />
             <SidebarLink
-              to="/overview"
+              to="#"
               imageSrc={OverviewIcon}
               label="Overview"
               isActive={pathname == "/overview"}
@@ -73,7 +73,7 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
             />           
 
             <SidebarLink
-              to="/accounts"
+              to="#"
               imageSrc={userIcon }
               label="Accounts"
               isActive={pathname == "/accounts"}
@@ -88,7 +88,7 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
               onClick={() => {}}
             />
             <SidebarLink
-              to="/beneficiary-management"
+              to="#"
               imageSrc={userIcon}
               label="Beneficiary Management"
               isActive={pathname == "/beneficiary-management"}
@@ -96,14 +96,14 @@ const Sidebar = forwardRef(({ showNav }, ref) => {
             />
             
             <SidebarLink
-              to="/help-center"
+              to="#"
               imageSrc={messageIcon}
               label="Help Center"
               isActive={pathname == "/help-center"}
               onClick={() => {}}
             />
             <SidebarLink
-              to="/settings"
+              to="#"
               imageSrc={settingsIcon}
               label="Settings"
               isActive={pathname == "/settings"}

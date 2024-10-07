@@ -1,12 +1,11 @@
 import axios from "axios";
-import CryptoJS from "crypto-js";
 import { toast } from "react-toastify";
 
 const createApiClient = () => {
   const key = process.env.NEXT_PUBLIC_SECRET_KEY;
 
   const client = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+    baseURL: process.env.NEXT_PUBLIC_SECRET_KEY,
     headers: {
       "Cache-Control": "no-cache",
     },
@@ -17,11 +16,11 @@ const createApiClient = () => {
       try {
         const encryptedToken = sessionStorage.getItem("userToken");
 
-        if (encryptedToken) {
-          const decryptedToken = CryptoJS.AES.decrypt(encryptedToken, key);
-          const token = decryptedToken.toString(CryptoJS.enc.Utf8);
-          config.headers.Authorization = `Bearer ${token}`;
-        }
+        // if (encryptedToken) {
+        //   const decryptedToken = CryptoJS.AES.decrypt(encryptedToken, key);
+        //   const token = decryptedToken.toString(CryptoJS.enc.Utf8);
+        //   config.headers.Authorization = `Bearer ${token}`;
+        // }
 
         return config;
       } catch (error) {

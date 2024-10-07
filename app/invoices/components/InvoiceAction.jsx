@@ -1,4 +1,3 @@
-import InvoiceCard from "@/components/Cards/InvoiceCard";
 import React from "react";
 import moneyIcon from "../../../public/assets/svgs/money.svg";
 import settingIcon from "../../../public/assets/svgs/setting.svg";
@@ -13,7 +12,7 @@ const InvoiceAction = () => {
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 items-center mb-6">
         <div
-          className={`relative w-full text-white h-fit overflow-hidden bg-primary shadow-xl rounded-3xl p-6`}
+          className={`relative w-full text-white h-fit overflow-hidden bg-primary  rounded-3xl p-6`}
         >
           <div className="mb-4">
             <Image
@@ -34,7 +33,7 @@ const InvoiceAction = () => {
           </p>
         </div>
         <div
-          className={`relative w-full h-fit overflow-hidden bg-white shadow-xl rounded-3xl p-6`}
+          className={`relative w-full h-fit overflow-hidden bg-white  rounded-3xl p-6`}
         >
           <div className="mb-4">
             <Image
@@ -55,7 +54,7 @@ const InvoiceAction = () => {
           </p>
         </div>
         <div
-          className={`relative w-full text-white h-fit overflow-hidden bg-white shadow-xl rounded-3xl p-6`}
+          className={`relative w-full text-white h-fit overflow-hidden bg-white  rounded-3xl p-6`}
         >
           <div className="mb-4">
             <Image
@@ -76,7 +75,6 @@ const InvoiceAction = () => {
           </p>
         </div>
       </div>
-      {/* <InvoiceCard className={"bg-primaryGrey text-white"} imageSrc={moneyIcon}/> */}
     </div>
   );
 };
