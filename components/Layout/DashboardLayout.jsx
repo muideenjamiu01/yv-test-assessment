@@ -8,8 +8,8 @@ function DashboardLayout({ children }) {
   const [showNav, setShowNav] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
-  function handleResize(setShowNav, setIsMobile) {
-    if (innerWidth <= 640) {
+  function handleResize() {
+    if (window.innerWidth <= 640) {
       setShowNav(false);
       setIsMobile(true);
     } else {
@@ -19,17 +19,17 @@ function DashboardLayout({ children }) {
   }
 
   useEffect(() => {
-    const handleResizeCallback = () => handleResize(setShowNav, setIsMobile);
+    const handleResizeCallback = handleResize;
 
     if (typeof window !== "undefined") {
-      addEventListener("resize", handleResizeCallback);
-      handleResize(setShowNav, setIsMobile); // Initial call to set initial state
+      window.addEventListener("resize", handleResizeCallback);
+      handleResize(); // Initial call to set initial state based on current window width
 
       return () => {
-        removeEventListener("resize", handleResizeCallback);
+        window.removeEventListener("resize", handleResizeCallback);
       };
     }
-  }, [setShowNav, setIsMobile]);
+  }, []);
 
   return (
     <>
@@ -51,8 +51,8 @@ function DashboardLayout({ children }) {
           showNav && !isMobile ? "pl-56 " : ""
         }`}
       >
-        {/* pl-56 shouldhave the same value as w-56 inside sidebar first div container. if the value is 4 then the w too should be 4 */}
-        <div className="px-4 md-px-10 bg-[#F5F6FA] ">{children}</div>
+        {/* pl-56 should have the same value as w-56 inside sidebar first div container */}
+        <div className="px-4 md-px-10 bg-[#F5F6FA]">{children}</div>
       </main>
     </>
   );

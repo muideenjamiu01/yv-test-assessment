@@ -5,14 +5,14 @@ import Image from "next/image";
 import { FaUserAlt } from "react-icons/fa";
 import { RiMenuUnfoldLine } from "react-icons/ri";
 
-import { Menu, Transition, Popover } from "@headlessui/react";
+import { Transition, Popover } from "@headlessui/react";
 import { GiCheckMark } from "react-icons/gi";
 import { toast } from "react-toastify";
 import { HiOutlineBell } from "react-icons/hi2";
 
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import { useSelector } from "react-redux";
+
 
 const Navbar = ({ showNav, setShowNav }) => {
   const [user, setUser] = useState(null);
