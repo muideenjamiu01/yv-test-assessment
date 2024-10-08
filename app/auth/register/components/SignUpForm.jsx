@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
 
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import { auth } from "../../../../firebase";
 
 
@@ -38,32 +38,47 @@ const SignUpForm = () => {
     password: Yup.string().required("Password is required"),
   });
 
-  const handleSignUp = async (values, { setSubmitting }) => {
-    setSubmitting(true);
-    try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        values.email,
-        values.password
-      );
-      const user = userCredential.user;
-      // Update the user's display name
-      await updateProfile(user, {
-        displayName: values.email.split('@')[0], // You can use any value you want for the display name
-      });
 
-      sessionStorage.setItem("user", JSON.stringify(user));
-      router.push("/");
-      toast.success("Registration successful!");
-      setIsLoggedIn(true);
-    } catch (error) {
-      const errorMessage =
-        error.message || "Registration failed. Please try again.";
-      toast.error(errorMessage);
-    } finally {
-      setSubmitting(false);
-    }
-  };
+
+const handleSignUp = async (values, { setSubmitting }) => {
+  setSubmitting(true);
+  try {
+    // Create user with email and password
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      values.email,
+      values.password
+    );
+    const user = userCredential.user;
+
+    // Update the user's display name
+    await updateProfile(user, {
+      displayName: values.email.split('@')[0], // You can use any value you want for the display name
+    });
+
+    // Now manually sign the user in with the same credentials
+    const loginCredential = await signInWithEmailAndPassword(
+      auth,
+      values.email,
+      values.password
+    );
+
+    // Store user in sessionStorage
+    sessionStorage.setItem("user", JSON.stringify(loginCredential.user));
+    toast.success("Registration  successful!");
+
+    // Redirect to the homepage or dashboard
+    router.push("/invoices");
+
+    setIsLoggedIn(true);
+  } catch (error) {
+    const errorMessage =
+      error.message || "Registration failed. Please try again.";
+    toast.error(errorMessage);
+  } finally {
+    setSubmitting(false);
+  }
+};
 
  
 
@@ -188,8 +203,6 @@ const SignUpForm = () => {
                   <div className="flex justify-center">
                     <BeatLoader color="#fff" />
                   </div>
-                ) : isLoggedIn ? (
-                  "Already signed Up"
                 ) : (
                   "Sign Up"
                 )}

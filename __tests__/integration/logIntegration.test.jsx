@@ -30,17 +30,17 @@ describe("LoginForm Integration Test", () => {
 
   test("renders form and submits with valid data", async () => {
     signInWithEmailAndPassword.mockResolvedValueOnce({
-      user: { email: "test@example.com" },
+      user: { email: "Muideenjamiu01@gmail.com" },
     });
 
     render(<LoginForm />);
 
     // Simulate typing into the email and password fields
     fireEvent.change(screen.getByPlaceholderText("Enter email address"), {
-      target: { value: "test@example.com" },
+      target: { value: "Muideenjamiu01@gmail.com" },
     });
     fireEvent.change(screen.getByPlaceholderText("Enter your password"), {
-      target: { value: "password123" },
+      target: { value: "123456" },
     });
 
     // Simulate clicking the login button
@@ -50,8 +50,8 @@ describe("LoginForm Integration Test", () => {
     await waitFor(() => {
       expect(signInWithEmailAndPassword).toHaveBeenCalledWith(
         auth,
-        "test@example.com",
-        "password123"
+        "Muideenjamiu01@gmail.com",
+        "123456"
       );
       expect(toast.success).toHaveBeenCalledWith(
         "Login successful!, You will be redirected shortly"
@@ -80,10 +80,10 @@ describe("LoginForm Integration Test", () => {
 
     // Simulate filling the form with valid input
     fireEvent.change(screen.getByPlaceholderText("Enter email address"), {
-      target: { value: "test@example.com" },
+      target: { value: "Muideenjamiu01@gmail.com" },
     });
     fireEvent.change(screen.getByPlaceholderText("Enter your password"), {
-      target: { value: "password123" },
+      target: { value: "123456" },
     });
 
     // Simulate clicking the login button

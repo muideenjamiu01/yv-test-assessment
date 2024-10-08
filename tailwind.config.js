@@ -30,24 +30,14 @@ module.exports = {
         primaryGrey: "#697598",
         lightGrey: "#F6F8FA",
         pink: "#FFB7BD",
-        pink100: "#FCDDEC", 
+        pink100: "#FCDDEC",
         grey200: "#B7BDCF",
         grey300: "#D9D9E0",
         grey400: "#666F77",
         green400: "#2DB260",
         gold: "#F8E39B",
-     
-        
       },
-      borderRadius: {
-        "5px": "5px",
-      },
-      boxShadow: {
-        dashboard: "0px 12px 30px 0px rgba(173, 173, 173, 0.25)",
-        filterCard: "",
-        footer: "-11px 0px 5px rgba(0, 0, 0, 0.15",
-        card: "0px 2px 11px rgba(20, 100, 244, 0.15);",
-      },
+
       letterSpacing: {
         tightest: "-.075em",
         tighter: "-.05em",
@@ -65,24 +55,7 @@ module.exports = {
       gap: {
         13: "3.125rem",
       },
-      fontSize: {
-        header: [
-          "3rem",
-          {
-            lineHeight: "3.5rem",
-            letterSpacing: "-0.01em",
-            fontWeight: "700",
-          },
-        ],
-        "": [
-          "1.875rem",
-          {
-            lineHeight: "2.25rem",
-            letterSpacing: "-0.02em",
-            fontWeight: "700",
-          },
-        ],
-      },
+
       backgroundImage: {
         loginBackground: "url('/assets/svgs/vForms.svg')",
       },

@@ -13,7 +13,6 @@ import { HiOutlineBell } from "react-icons/hi2";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 
-
 const Navbar = ({ showNav, setShowNav }) => {
   const [user, setUser] = useState(null);
 
@@ -158,6 +157,8 @@ const Navbar = ({ showNav, setShowNav }) => {
             <div className="flex justify-center items-center bg-white rounded-full p-2">
               <div className="relative inline-block text-left">
                 <div
+                
+                  data-testid="user-avatar"
                   className="flex items-center space-x-2 cursor-pointer"
                   onClick={toggleDropdown}
                 >
@@ -185,6 +186,7 @@ const Navbar = ({ showNav, setShowNav }) => {
                 {dropdownOpen && (
                   <div className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg z-10">
                     <button
+                      data-testid="logout-button"
                       className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       onClick={handleLogout}
                     >
