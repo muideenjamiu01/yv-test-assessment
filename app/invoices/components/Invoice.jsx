@@ -1,37 +1,26 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 import senderImage from "../../../public/assets/svgs/sender.svg";
 
-const Invoice = ({ invoiceData }) => {
+
+
+const Invoice = ({ invoiceData,invoiceRef }) => {
+
   const {
     sender,
     customer,
     invoiceDetails,
     items,
-    // totals,
+    totals,
     paymentInfo,
     footerNote,
   } = invoiceData;
 
-// Function to calculate totals
-const calculateTotals = (items) => {
-  const subtotal = items.reduce((acc, item) => acc + item.total, 0);
-  const discountRate = 0.025; // 2.5%
-  const discount = subtotal * discountRate;
-  const totalAmountDue = subtotal - discount;
-
-  return {
-    subTotal: subtotal,
-    discount: discount.toFixed(2), // Format discount to two decimal places
-    totalAmountDue: totalAmountDue.toFixed(2), // Format total to two decimal places
-  };
-};
-
-// Calculate totals based on current items
-const totals = calculateTotals(items);
 
   return (
-    <div className="rounded-[40px] shadow-sm p-6 bg-white border">
+    <div>
+      <div ref={invoiceRef} className="rounded-[40px] p-6 bg-white border">
       <div className="">
         <div className="bg-pink100 p-5 rounded-[40px] mb-6">
           <div className="flex flex-col md:flex-row justify-between mb-8">
@@ -261,6 +250,7 @@ const totals = calculateTotals(items);
           <p className="text-sm text-gray-500"> {footerNote.note}</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

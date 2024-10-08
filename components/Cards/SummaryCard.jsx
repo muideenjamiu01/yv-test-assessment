@@ -6,7 +6,7 @@ const SummaryCard = ({ title, total, statusCount, kobo }) => {
   return (
     <div>
       <div
-        className={`relative w-full h-full overflow-hidden bg-white shadow-sm rounded-2xl  p-6`}
+        className={`relative w-full h-full overflow-hidden bg-white  rounded-2xl  p-6`}
       >
         <div>
           <div>

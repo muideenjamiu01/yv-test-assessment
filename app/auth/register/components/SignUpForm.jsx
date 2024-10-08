@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
 
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import { auth } from "../../../../firebase";
 
 
@@ -38,32 +38,47 @@ const SignUpForm = () => {
     password: Yup.string().required("Password is required"),
   });
 
-  const handleSignUp = async (values, { setSubmitting }) => {
-    setSubmitting(true);
-    try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        values.email,
-        values.password
-      );
-      const user = userCredential.user;
-      // Update the user's display name
-      await updateProfile(user, {
-        displayName: values.email.split('@')[0], // You can use any value you want for the display name
-      });
 
-      sessionStorage.setItem("user", JSON.stringify(user));
-      router.push("/");
-      toast.success("Registration successful!");
-      setIsLoggedIn(true);
-    } catch (error) {
-      const errorMessage =
-        error.message || "Registration failed. Please try again.";
-      toast.error(errorMessage);
-    } finally {
-      setSubmitting(false);
-    }
-  };
+
+const handleSignUp = async (values, { setSubmitting }) => {
+  setSubmitting(true);
+  try {
+    // Create user with email and password
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      values.email,
+      values.password
+    );
+    const user = userCredential.user;
+
+    // Update the user's display name
+    await updateProfile(user, {
+      displayName: values.email.split('@')[0], // You can use any value you want for the display name
+    });
+
+    // Now manually sign the user in with the same credentials
+    const loginCredential = await signInWithEmailAndPassword(
+      auth,
+      values.email,
+      values.password
+    );
+
+    // Store user in sessionStorage
+    sessionStorage.setItem("user", JSON.stringify(loginCredential.user));
+    toast.success("Registration  successful!");
+
+    // Redirect to the homepage or dashboard
+    router.push("/invoices");
+
+    setIsLoggedIn(true);
+  } catch (error) {
+    const errorMessage =
+      error.message || "Registration failed. Please try again.";
+    toast.error(errorMessage);
+  } finally {
+    setSubmitting(false);
+  }
+};
 
  
 
@@ -100,7 +115,7 @@ const SignUpForm = () => {
               {/* Email */}
               <div className="flex flex-col mb-6">
                 <div className="flex relative  ">
-                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500  text-sm">
                     <svg
                       width="15"
                       height="15"
@@ -115,7 +130,7 @@ const SignUpForm = () => {
                     type="text"
                     id="email"
                     name="email"
-                    className="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-3 px-4 bg-transparent text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]   hover:border-[#46B2C8] focus:border-transparent"
+                    className="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-3 px-4 bg-transparent text-gray-700 placeholder-gray-400  text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]   hover:border-[#46B2C8] focus:border-transparent"
                     placeholder="Enter email address"
                   />
                 </div>
@@ -130,7 +145,7 @@ const SignUpForm = () => {
               <div className="flex flex-col gap-2">
                 <div className="flex relative focus:border-[#46B2C8]  hover:border-[#46B2C8]
                 ">
-                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-[#46B2C8] text-gray-500 shadow-sm text-sm">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 hover:border-[#46B2C8] text-gray-500  text-sm">
                     <svg
                       width="15"
                       height="15"
@@ -145,13 +160,13 @@ const SignUpForm = () => {
                     type={showPassword ? "text" : "password"}
                     id="password"
                     name="password"
-                    className="flex-1 appearance-none border-l border-b border-t  border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]  hover:border-[#46B2C8] focus:border-transparent"
+                    className="flex-1 appearance-none border-l border-b border-t  border-gray-300 w-full py-3 px-4 bg-white text-gray-700 placeholder-gray-400  text-base focus:outline-none focus:ring-2 focus:ring-[#46B2C8]  hover:border-[#46B2C8] focus:border-transparent"
                     placeholder="Enter your password"
                   />
                   <button
                     type="button"
                     onClick={togglePasswordVisibility}
-                    className="inline-flex rounded-r-lg  appearance-none  items-center px-3 border-t bg-white border-r border-b border-gray-300 text-gray-500 shadow-sm text-sm cursor-pointer focus:outline-none "
+                    className="inline-flex rounded-r-lg  appearance-none  items-center px-3 border-t bg-white border-r border-b border-gray-300 text-gray-500  text-sm cursor-pointer focus:outline-none "
                   >
                     {showPassword ? (
                       <AiOutlineEye />
@@ -188,8 +203,6 @@ const SignUpForm = () => {
                   <div className="flex justify-center">
                     <BeatLoader color="#fff" />
                   </div>
-                ) : isLoggedIn ? (
-                  "Already signed Up"
                 ) : (
                   "Sign Up"
                 )}
